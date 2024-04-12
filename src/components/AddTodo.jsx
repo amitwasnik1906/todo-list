@@ -42,7 +42,7 @@ function AddTodo() {
 
         <div className="text-xl text-yellow-200 mb-4">Todos :</div>
         <ul className="list-none">
-          {todos.map((todo) => (
+          {todos?.map((todo) => (
             <div key={todo.id}
               className='w-full'
             >
