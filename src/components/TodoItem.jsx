@@ -25,7 +25,7 @@ function TodoItem(todo) {
         className="mt-4 flex justify-between items-center bg-zinc-800 px-4 py-2 rounded"
         key={todo.id}
       >
-        {/* <div className='text-white'>{todo.text}</div> */}
+        
         <input
           type="text"
           className={`border text-white outline-none w-full bg-transparent p-1 rounded-lg ${isTodoEditable ? "border-white/10 px-2" : "border-transparent"

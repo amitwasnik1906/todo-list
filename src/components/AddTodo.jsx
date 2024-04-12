@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTodo } from "../features/todo/todoSlice";
 import TodoItem from "./TodoItem";
@@ -11,9 +11,14 @@ function AddTodo() {
 
   const addTodoHandler = (e) => {
     e.preventDefault()
+    if(input != "")
     dispatch(addTodo(input))
     setInput('')
   }
+
+  useEffect(() => {
+    localStorage.setItem("localTodos", JSON.stringify(todos))
+  }, [todos])
 
   return (
     <>
